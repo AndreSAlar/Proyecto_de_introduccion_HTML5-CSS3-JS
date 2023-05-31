@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="lib/fontawesome-free-6.4.0-web/css/all.css">
+    <link rel="shortcut icon" href="img/logo.png">
+    <title>World Pizza</title>
+</head>
+
+<body>
+    <!--
+    <h1 class="titulos">Titulos</h1>
+    <h1 class="subtitulos">Subtitulos</h1>
+    <button class="btn">boton <span class="fas fa-angle-right"></span> </button>
+    -->
+
+    <!--menu principal-->
+    <div class="menu-principal">
+        <div class="logo" id="logo">
+            <img src="img/logo.PNG" alt="logo de marca">
+        </div>
+        <div class="menu-bar " id="menuBar">
+            <i class="fas fa-angle-right" id="btnMenuClose"></i>
+            <nav class="enlaces" id="enlaces">
+                <ul>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#equipo">Equipo</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="redes-sociales">
+                <a href="#" class="fab fa-facebook"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-youtube"></a>
+            </div>
+        </div>
+
+        <i class="fas fa-bars" id="btnMenuOpen"></i>
+
+    </div>
+
+    <!--Slider de productos-->
+    <section id="menu-productos">
+        <div class="contenedor-productos">
+            <button id="btnLeft"><span class="fas fa-angle-left"></span></button>
+
+            <div class="slider">
+                <div class="container-productos">
+                    <div class="descrip-productos">
+                        <h2>Producto <b>Premium</b></h2>
+                        <h1>Tomates</h1>
+                        <p>Tomates: ipsum dolor sit amet consectetur adipisicing elit.
+                            Placeat facere quisquam quidem perspiciatis vitae sit .</p>
+                        <button class="btn">¡Solicítala ya! <span class="fas fa-angle-right"></span></button>
+                    </div>
+                    <div class="imagen-productos">
+                        <img class="pizzas" src="img/tomates.png" alt="imagen pizza de tomates">
+                    </div>
+                </div>
+
+                <div class="container-productos">
+                    <div class="descrip-productos">
+                        <h2>Producto <b>Premium</b></h2>
+                        <h1>Peperonni</h1>
+                        <p>Peperonni: ipsum dolor sit amet consectetur adipisicing elit.
+                            Placeat facere quisquam quidem perspiciatis vitae sit .</p>
+                        <button class="btn">¡Solicítala ya! <span class="fas fa-angle-right"></span></button>
+                    </div>
+                    <div class="imagen-productos">
+                        <img class="pizzas" src="img/peperonni.png" alt="imagen pizza de Peperonni">
+                    </div>
+                </div>
+
+                <div class="container-productos">
+                    <div class="descrip-productos">
+                        <h2>Producto <b>Plus</b></h2>
+                        <h1>Hongos</h1>
+                        <p>Hongos: ipsum dolor sit amet consectetur adipisicing elit.
+                            Placeat facere quisquam quidem perspiciatis vitae sit .</p>
+                        <button class="btn">¡Solicítala ya! <span class="fas fa-angle-right"></span></button>
+                    </div>
+                    <div class="imagen-productos">
+                        <img class="pizzas" src="img/hongos.png" alt="imagen pizza de Hongos">
+                    </div>
+                </div>
+
+                <div class="container-productos">
+                    <div class="descrip-productos">
+                        <h2>Producto <b>Especial</b></h2>
+                        <h1>Alcaparras</h1>
+                        <p>Alcaparras: ipsum dolor sit amet consectetur adipisicing elit.
+                            Placeat facere quisquam quidem perspiciatis vitae sit .</p>
+                        <button class="btn">¡Solicítala ya! <span class="fas fa-angle-right"></span></button>
+                    </div>
+                    <div class="imagen-productos">
+                        <img class="pizzas" src="img/alcaparras.png" alt="imagen pizza de Alcaparras">
+                    </div>
+                </div>
+
+                <div class="container-productos">
+                    <div class="descrip-productos">
+                        <h2>Producto <b>Supremo</b></h2>
+                        <h1>Queso</h1>
+                        <p>Queso: ipsum dolor sit amet consectetur adipisicing elit.
+                            Placeat facere quisquam quidem perspiciatis vitae sit .</p>
+                        <button class="btn">¡Solicítala ya! <span class="fas fa-angle-right"></span></button>
+                    </div>
+                    <div class="imagen-productos">
+                        <img class="pizzas" src="img/queso.png" alt="imagen pizza de Queso">
+                    </div>
+                </div>
+
+                <div class="container-productos">
+                    <div class="descrip-productos">
+                        <h2>Producto <b>Base</b></h2>
+                        <h1>Hawaiana</h1>
+                        <p>Hawaiana: ipsum dolor sit amet consectetur adipisicing elit.
+                            Placeat facere quisquam quidem perspiciatis vitae sit .</p>
+                        <button class="btn">¡Solicítala ya! <span class="fas fa-angle-right"></span></button>
+                    </div>
+                    <div class="imagen-productos">
+                        <img class="pizzas" src="img/hawai.png" alt="imagen pizza Hawaiana">
+                    </div>
+                </div>
+
+            </div>
+
+
+            <button id="btnRight"><span class="fas fa-angle-right"></span></button>
+
+
+        </div>
+    </section>
+
+    <!-- Seccion de servicios -->
+    <section id="servicios">
+        <div class="servicios-titulos">
+            <h2 class="subtitulos">La mejor pizza del mundo</h2>
+            <h1 class="titulos">Bienvenidos a World Pizza</h1>
+        </div>
+
+        <div class="servicios-container">
+            <div class="imagen-central">
+                <img src="img/mitad-mitad.png" alt="Pizza servicios">
+            </div>
+
+            <div class="items calidad">
+                <p><span class="fas fa-pizza-slice"></span></p>
+                <p class="titulo-item">Calidad</p>
+                <p class="texto-item">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div class="items ingredientes">
+                <p><span class="fas fa-cheese"></span></p>
+                <p class="titulo-item">Ingredientes</p>
+                <p class="texto-item">Quasi unde eum veniam ex! Fuga cupiditate accusantium quam ipsum.</p>
+            </div>
+            <div class="items rapidez">
+                <p><span class="fas fa-clock"></span></p>
+                <p class="titulo-item">Rapidez</p>
+                <p class="texto-item">Aaspernatur accusamus nemo et optio dolores debitis expedita.</p>
+            </div>
+            <div class="items delivery">
+                <p><span class="fas fa-shipping-fast"></span></p>
+                <p class="titulo-item">Delivery</p>
+                <p class="texto-item">Cipsum dolor sit amet cdistinctio dolores debitis expedita ab est.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Seccion de el equipo -->
+    <section id="equipo">
+        <div class="persona">
+            <img src="img/personal/alan.PNG" alt="Alan Ivanovich" class="persona-imagen">
+            <div class="persona-info">
+                <h2>Alan Ivanovich</h2>
+                <p>Chef Pizzero</p>
+                <div class="social-media">
+                    <a href=""><span class="fab fa-facebook"></span></a>
+                    <a href=""><span class="fab fa-instagram"></span></a>
+                    <a href=""><span class="fab fa-twitter"></span></a>
+                    <a href=""><span class="fab fa-linkedin-in"></span></a>
+                </div>
+            </div>
+        </div>
+        <div class="persona">
+            <img src="img/personal/ariel.PNG" alt="Ariel Medicci" class="persona-imagen">
+            <div class="persona-info">
+                <h2>Ariel Medicci</h2>
+                <p>Chef Salcero</p>
+                <div class="social-media">
+                    <a href=""><span class="fab fa-facebook"></span></a>
+                    <a href=""><span class="fab fa-instagram"></span></a>
+                    <a href=""><span class="fab fa-twitter"></span></a>
+                    <a href=""><span class="fab fa-linkedin-in"></span></a>
+                </div>
+            </div>
+        </div>
+        <div class="persona">
+            <img src="img/personal/ivanka.PNG" alt="Ivanka Omursacova" class="persona-imagen">
+            <div class="persona-info">
+                <h2>Ivanka Omursacova</h2>
+                <p>Jefe gourmet</p>
+                <div class="social-media">
+                    <a href=""><span class="fab fa-facebook"></span></a>
+                    <a href=""><span class="fab fa-instagram"></span></a>
+                    <a href=""><span class="fab fa-twitter"></span></a>
+                    <a href=""><span class="fab fa-linkedin-in"></span></a>
+                </div>
+            </div>
+        </div>
+        <div class="persona">
+            <img src="img/personal/rita.PNG" alt="Rita Lioni" class="persona-imagen">
+            <div class="persona-info">
+                <h2>Rita Lioni</h2>
+                <p>Administradora</p>
+                <div class="social-media">
+                    <a href=""><span class="fab fa-facebook"></span></a>
+                    <a href=""><span class="fab fa-instagram"></span></a>
+                    <a href=""><span class="fab fa-twitter"></span></a>
+                    <a href=""><span class="fab fa-linkedin-in"></span></a>
+                </div>
+            </div>
+        </div>
+        <div class="persona">
+            <img src="img/personal/sonia.PNG" alt="Sonia Vitaliano" class="persona-imagen">
+            <div class="persona-info">
+                <h2>Sonia Vitaliano</h2>
+                <p>Asistente chef</p>
+                <div class="social-media">
+                    <a href=""><span class="fab fa-facebook"></span></a>
+                    <a href=""><span class="fab fa-instagram"></span></a>
+                    <a href=""><span class="fab fa-twitter"></span></a>
+                    <a href=""><span class="fab fa-linkedin-in"></span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Seccion de los ingredientes -->
+    <section id="ingredientes">
+        <div class="ingred">
+            <img src="img/ingredientes/quesos.PNG" alt="Quesos" class="ingred-imagen">
+            <div class="ingred-info">
+                <p><span class="fas fa-cheese"></span></p>
+                <p class="ingred-txt">Quesos</p>
+            </div>
+        </div>
+        <div class="ingred">
+            <img src="img/ingredientes/vegetales.PNG" alt="Vegetales" class="ingred-imagen">
+            <div class="ingred-info">
+                <p><span class="fas fa-leaf"></span></p>
+                <p class="ingred-txt">Vegetales</p>
+            </div>
+        </div>
+        <div class="ingred">
+            <img src="img/ingredientes/salsas.PNG" alt="Salsas" class="ingred-imagen">
+            <div class="ingred-info">
+                <p><span class="fas fa-fill-drip"></span></p>
+                <p class="ingred-txt">Salsas</p>
+            </div>
+        </div>
+        <div class="ingred">
+            <img src="img/ingredientes/carnes.PNG" alt="Carnes" class="ingred-imagen">
+            <div class="ingred-info">
+                <p><span class="fas fa-drumstick-bite"></span></p>
+                <p class="ingred-txt">Carnes</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Seccion de Contactanos -->
+    <section id="contacto">
+        <div class="contacto-titulo">
+            <h2 class="subtitulos">Queremos conocer tu opinión</h2>
+            <h1 class="titulos">Contáctanos</h1>
+            </div>
+        </div>
+
+        <form action="" id="contacto-formulario">
+            <div class="two-fiels">
+                <div class="inputConIcono">
+                    <input type="text" id="nombre" name="nombre" class="input-text" placeholder="Nombre">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="inputConIcono">
+                    <input type="email" id="email" name="email" class="input-email" placeholder="E-mail">
+                    <i class="fas fa-envelope"></i>
+                </div>
+            </div>
+
+            <div class="fiels">
+                <div class="inputConIcono textAreaIcono">
+                    <textarea name="comentario" id="comentario" class="text-area" placeholder="Ingrese su mensaje aquí..."></textarea>
+                    <i class="fas fa-comments"></i>
+                </div>                
+            </div>
+
+            <div class="fiels-btn">
+                <input type="submit" class="btn btn-input" value="Enviar">
+            </div>
+
+        </form>        
+    </section>
+
+
+    <!-- Seccion de Alertas -->
+    <div class="alertas">
+        <div id="alertError" class="alert hide">
+            <span class="icono-alert fas fa-exclamation-circle"></span>
+            <span class="msg">Error: Campos de entrada vacios!</span>
+        </div>
+
+        <div id="alertSuccess" class="alert hide">
+            <span class="icono-alert fas fa-check-circle"></span>
+            <span class="msg">Datos enviados. Gracias por contactarnos!</span>
+        </div>
+    </div>
+
+
+    <!-- Seccion de FOOTER -->
+    <footer>
+        <div class="sociales-metodo">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Lorem ipsum dolor sit.</span>
+        </div>
+        <div class="sociales-metodo">
+            <i class="fas fa-envelope"></i>
+            <span>lorem_ipsum@worldpizza.io</span>
+        </div>
+        <div class="sociales-metodo">
+            <i class="fas fa-phone"></i>
+            <span>Lorem ipsum dolor sit.</span>
+        </div>
+        <div class="sociales-metodo">
+            <i class="fab fa-twitter"></i>
+            <span>Lorem ipsum dolor sit.</span>
+        </div>
+    </footer>
+
+
+    <!-- Boton ir arriba -->
+    <div id="btn-top" >
+        <span class="fas fa-angle-up"></span>
+
+    </div>
+
+
+
+
+
+
+
+    <script src="js/script.js"></script>
+</body>
+
+
+</html>

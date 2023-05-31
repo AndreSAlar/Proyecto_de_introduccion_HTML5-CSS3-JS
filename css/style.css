@@ -1,0 +1,959 @@
+/* Variables*/
+:root {
+    --color-primario: #fcb030;
+    --color-secundario: #e92f3d;
+    --color-backgroud: #eff6f5;
+    --color-background-sombra: #e92f3d30;
+    --color-texto: #a1a5a6;
+    --fuente-default: 'Open Sans';
+
+}
+
+/* estilos generales*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fuente-default);
+}
+
+html{
+    scroll-behavior: smooth; /* realiza el scroll con transision, como si hiciece un recorrido*/
+}
+
+body {
+    background: var(--color-backgroud);
+}
+
+.titulos {
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+
+}
+
+.subtitulos {
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 400;
+    text-align: center;
+    color: var(--color-primario);
+
+}
+
+.btn {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #ffffff;
+    background: var(--color-primario);
+    font-weight: 700;
+    padding: 15px 30px;
+    outline: none;
+    border: 1px solid var(--color-primario);
+    cursor: pointer;
+    position: relative;
+    top: 20px;
+    transition: all 0.3s;
+
+}
+
+.btn:hover {
+    padding: 15px 40px;
+    font-size: 13px;
+}
+
+.btn span {
+    padding-left: 10px;
+}
+
+.menu-principal {
+    width: 100%;
+    height: 75px;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    background: var(--color-backgroud);
+    z-index: 1;
+    /* como en photoshop, son capas, la primera es la de delante*/
+
+}
+
+.logo img {
+    width: 80px;
+    justify-content: space-between;
+}
+
+.menu-bar {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+}
+
+.menu-bar .enlaces ul li {
+    display: inline-block;
+    padding: 0 10px;
+}
+
+.menu-bar .enlaces ul li a {
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--color-texto);
+    font-weight: 600;
+    background: linear-gradient(currentColor, currentColor);
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: all 0.4s;
+}
+
+.menu-bar .enlaces ul li a:hover {
+    color: var(--color-secundario);
+    background-size: 50% 2px;
+}
+
+.menu-bar .redes-sociales a {
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 0 10px;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--color-texto);
+    transition: all 0.4s;
+}
+
+.menu-bar .redes-sociales a:hover {
+    color: var(--color-secundario);
+
+}
+
+.menu-principal i {
+    cursor: pointer;
+    color: var(--color-texto);
+    font-size: 30px;
+    float: right;
+    transition: all 0.3s;
+    display: none;
+}
+
+.menu-principal i:hover {
+    color: var(--color-secundario);
+}
+
+/*Slider de productos*/
+#menu-productos .contenedor-productos {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 0;
+}
+
+.contenedor-productos #btnLeft,
+.contenedor-productos #btnRight {
+    position: absolute;
+    height: 20%;
+    width: 50px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 40px;
+    margin: 0 15px;
+    color: var(--color-secundario);
+    z-index: 500;
+    outline: none;
+    transition: all 0.3s;
+}
+
+.contenedor-productos #btnLeft:hover,
+.contenedor-productos #btnRight:hover {
+    background: var(--color-background-sombra);
+    transform: translateY(3px);
+}
+
+.contenedor-productos #btnLeft {
+    left: 0;
+}
+
+.contenedor-productos #btnRight {
+    right: 0;
+}
+
+.pizzas {
+    margin: 15px;
+}
+
+.slider {
+    display: flex;
+    overflow: hidden;
+    /* quita el scroll*/
+    height: calc(100vh);
+    /* 100vh hace referencia al 100% del height viwewport*/
+    scroll-behavior: smooth;
+    /* permite detectar scrolly lo ejecuta con una leve animacion*/
+}
+
+.container-productos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 100%;
+    flex-shrink: 0;
+}
+
+.descrip-productos {
+    width: 30%;
+    /*tamaño de la imagen VALIDARRRR*/
+}
+
+.descrip-productos h1 {
+    font-size: 3vw;
+    /* viewport heigh: aumenta el tamaño en funcion del tamaño de la pantalla*/
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.descrip-productos h2 {
+    text-transform: lowercase;
+    font-size: 2.2vw;
+    font-weight: 100;
+}
+
+.descrip-productos p {
+    color: var(--color-texto);
+    font-style: italic;
+    text-align: justify;
+}
+
+.imagen-productos {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.imagen-productos img {
+    width: 60%;
+    /*height: 100%;*/
+    transform: scale(1.1);
+    transition: all 0.3s;
+}
+
+.container-productos .imagen-productos img:hover {
+    transform: scale(1.12);
+}
+
+
+/* SECION DE SERVICIOS */
+#servicios {
+    height: 100vh;
+    background: #ffffff;
+    padding: 40px;
+}
+
+.servicios-titulos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.servicios-container {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-gap: 30px;
+    grid-template-areas: "ingredientes imagen rapidez"
+        "calidad imagen delivery";
+}
+
+.calidad {
+    grid-row: calidad;
+    grid-column: calidad;
+}
+
+.ingredientes {
+    grid-row: ingredientes;
+    grid-column: ingredientes;
+}
+
+.rapidez {
+    grid-row: rapidez;
+    grid-column: rapidez;
+}
+
+.delivery {
+    grid-row: delivery;
+    grid-column: delivery;
+}
+
+.imagen-central {
+    grid-row: imagen;
+    grid-column: imagen;
+    transition: all 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 10px;
+}
+
+.imagen-central:hover {
+    transform: scale(1.1);
+}
+
+.items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.items span {
+    text-align: center;
+    width: 95px;
+    font-size: 40px;
+    color: var(--color-secundario);
+    padding: 20px;
+    border: 5px double #dedede;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+.items span:hover {
+    background: var(--color-secundario);
+    color: #ffffff;
+}
+
+.ingredientes span,
+.calidad span {
+    color: var(--color-primario);
+}
+
+.ingredientes span:hover,
+.calidad span:hover {
+    background: var(--color-primario);
+    color: #ffffff;
+}
+
+.items .titulo-item {
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.items .texto-item {
+    font-size: 18px;
+    color: var(--color-texto);
+    text-align: center;
+    font-style: italic;
+    padding: 0 20px;
+
+}
+
+
+/* SECION DEL EQUIPO DE PERSONAL */
+#equipo {
+    height: 100vh;
+    display: flex;
+}
+
+.persona {
+    flex-grow: 1;
+    overflow: hidden;
+    position: relative;
+    /**/
+    transition: all 0.5s;
+}
+
+.persona:hover {
+    flex-grow: 3;
+    /* a mayot valor menor será la visivilidad de las imagenes de los lados a la señalada con el cursor*/
+}
+
+.persona-imagen {
+    height: 100%;
+    position: absolute;
+    /*quedate al inicio, osea a la izquieda del espacio*/
+    left: 50%;
+    /* moverse 50% por la izquierda*/
+    transform: translateX(-50%);
+    /* quitar 50% en poicion */
+    filter: grayscale(90%);
+}
+
+.persona:hover .persona-imagen {
+    filter: grayscale(0%);
+}
+
+.persona-info {
+    position: absolute;
+    /*pocicion fija o absoluta, contando 10px desde abajo*/
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    transition: all 0.5s;
+    opacity: 0;
+    /* valor 0=transparencia, esto se cambia en .persona:hover .persona-info para que muestre la info al poner el cursor sobre cada foto*/
+}
+
+.persona:hover .persona-info {
+    opacity: 1;
+    /* valor 0=transparencia, esto se cambia en .persona:hover .persona-info para que muestre la info al poner el cursor sobre cada foto*/
+    bottom: 60px;
+}
+
+.persona-info h2 {
+    font-size: 20px;
+    color: #000000;
+    font-weight: 600;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+    /* sombax en y, difuminado*/
+}
+
+.persona-info p {
+    font-size: 18px;
+    color: var(--color-secundario);
+    font-weight: 700;
+    font-style: italic;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 3px rgba(255, 0, 0, 0.5);
+    /* sombax en y, difuminado*/
+}
+
+.social-media a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    color: #ffffff;
+    background: var(--color-secundario);
+    line-height: 30px;
+    /* con esta propiedad al mismo valor del alto y ancho se logra CENTRAR el contenido*/
+    border-radius: 50%;
+    margin: 0 2px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s;
+    transition: all 0.5s;
+}
+
+.social-media a:hover {
+    color: var(--color-secundario);
+    background: transparent;
+    transform: scale(1.5);
+}
+
+
+
+/* SECION DE INGREDIENTES */
+#ingredientes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ingred {
+    flex-grow: 1;
+    overflow: hidden;
+    position: relative;
+    height: 250px;
+}
+
+.ingred-imagen {
+    position: absolute;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.ingred-info {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    transition: all 0.3s;
+}
+
+.ingred-info p {
+    font-size: 28px;
+    color: #ffffff;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.ingred-info:hover p {
+    transform: translateY(15px);
+}
+
+.ingred-info:hover {
+    background: rgba(0, 0, 0, 0.25);
+}
+
+
+
+
+/* SECION DE CONTACTO */
+#contacto {
+    height: 100vh;
+    padding: 60px;
+    position: relative;
+    /* para poder mover lo elementos hijos*/
+}
+
+#contacto-formulario {
+    width: 70%;
+    margin: 50px auto;
+}
+
+.two-fiels {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-text,
+.input-email,
+.text-area {
+    border: 1px solid #b4b4b4;
+    color: #888888;
+    background: #ffffff;
+    outline: none;
+    /* quita el borde azul al seleccionar los input*/
+    padding: 15px 60px;
+    height: 45px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    transition: all 0.3s;
+}
+
+.text-area {
+    width: 100%;
+    height: 150px;
+    resize: none;
+}
+
+.input-text,
+.input-email {
+    width: 100%;
+}
+
+.inputConIcono {
+    position: relative;
+    /* se hace en este contenedor para que sus contenedores hijos puedan posicionarse con absolut*/
+    width: 48%;
+}
+
+.inputConIcono i {
+    position: absolute;
+    left: 0;
+    padding: 14px 15px;
+    background: #888888;
+    color: #ffffff;
+    transition: all 0.5s;
+}
+
+.textAreaIcono {
+    width: 100%;
+}
+
+.textAreaIcono i {
+    background: transparent;
+    color: #888888;
+    padding: 0;
+    font-size: 25px;
+    left: 10px;
+    top: 10px;
+    transition: all 0.5s;
+}
+
+.inputConIcono input:focus,
+.inputConIcono textarea:focus {
+    border: 1px solid var(--color-primario);
+}
+
+.inputConIcono input:focus+i {
+    background: var(--color-primario);
+}
+
+.inputConIcono textarea:focus+i {
+    color: var(--color-primario);
+}
+
+.fiels-btn {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-input {
+    padding: 15px 50px;
+}
+
+.btn-input:hover {
+    padding: 15px 60px;
+}
+
+
+
+/* SECION DE MENSAJES DE ALERTAS */
+.alertas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.alert {
+    width: 60%;
+    padding: 20px 60px;
+    position: fixed;
+    top: 0;
+    transition: all 0.5s;
+}
+
+.alert.show {
+    /* esto hace que el alert se muestre cuando con JS se agregue la clase show */
+    transform: translateY(50%);
+}
+
+.alert.hide {
+    /* esto hace que el alert se oculte; por defecto, en el archivo html esta definida la clase hide */
+    transform: translateY(-110%);
+}
+
+.alert .icono-alert {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+}
+
+.alert .msg {
+    padding: 0 20px;
+    font-size: 18px;
+}
+
+#alertError {
+    background: #f8d7da;
+    border-right: 10px solid #da3748;
+    border-top: 10px solid rgba(255, 99, 71, 0.5);
+}
+
+#alertError .icono-alert {
+    color: #da3748;
+}
+
+#alertError .msg {
+    color: #721c24;
+}
+
+#alertSuccess {
+    background: #d7f8e4;
+    border-right: 10px solid #37da4d;
+    border-top: 10px solid rgba(0, 255, 0, 0.5);
+}
+
+#alertSuccess .icono-alert {
+    color: #37da4d;
+}
+
+#alertSuccess .msg {
+    color: #1c721f;
+}
+
+
+/* SECION DE ELEMENTOS DE FOOOOOOOTER */
+footer {
+    display: flex;
+    margin-top: -100px;
+}
+
+.sociales-metodo {
+    width: 25%;
+    /* ancho de cada elemento, son 4, ocupan el 100%*/
+    height: 100px;
+    background: #333333;
+    color: #ffffff;
+    position: relative;
+    /* recuerda: esto es para luego manipular como absolute a los elementos hijos */
+    text-align: center;
+    overflow: hidden;
+}
+
+.sociales-metodo i {
+    position: absolute;
+    /* esto es posible gracias a que en el contenedor padre se establecio pocicition: relative */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+    line-height: 100px;
+    transition: all 0.3s;
+}
+
+.sociales-metodo span {
+    position: absolute;
+    /* esto es posible gracias a que en el contenedor padre se establecio pocicition: relative */
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    padding: 10px 0;
+    font-size: 12px;
+    background: var(--color-primario);
+    color: #ffffff;
+    letter-spacing: 1px;
+    font-weight: 700;
+    transform: translateY(60px);
+    /* esto saca el span de la vista, para que suba cuando tenga efecto :hover */
+    transition: all 0.5s;
+}
+
+.sociales-metodo i:hover+span {
+    /* cuanod haga hover al elemento icono, le pone estos estilos al span */
+    transform: translateY(0px);
+}
+
+.sociales-metodo i:hover {
+    transform: translateY(-20px);
+    /* cuando haga el hover al elemento icono, sube 20px para dar espacio al span que hace su aparicion */
+}
+
+
+/* BOTON DE IR ARRIBA DEL TODO */
+#btn-top{
+    width: 50px;
+    height: 50px;
+    background: var(--color-primario);
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1;
+    transform: translateX(200%);
+    transition: all 0.3s;
+}
+
+#btn-top.show{
+    transform: translateY(0);
+}
+#btn-top.scrollFinal{
+    transform: translateY(-250%);
+}
+
+
+#btn-top span{
+    color: #ffffff;
+    font-size: 25px;
+    width: 100%;
+    text-align: center;
+    line-height: 50px;
+    transition: all 0.3s;
+}
+#btn-top:hover{
+    background:#d89127;
+}
+#btn-top:hover span{
+    transform: translateY(-3px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------- MEDIA QUERYS ---------------------------------*/
+/* ----------- MEDIA QUERYS ---------------------------------*/
+/* ----------- MEDIA QUERYS ---------------------------------*/
+
+/* estilos para pantallas de mesnos de 850px */
+
+@media screen and (max-width:850px) {
+
+    /* para slider*/
+    .container-productos {
+        flex-direction: column;
+        /*height: 87vh;*/
+    }
+
+    /*.pizzas {
+        margin: 0;
+    }*/
+
+    .descrip-productos {
+        width: 70%;
+        order: 1;
+    }
+
+    .descrip-productos .btn {
+        padding: 10px 20px;
+    }
+
+    .descrip-productos .btn.btn:hover {
+        padding: 10px 25px;
+    }
+
+
+    /* para Seccion servicios*/
+    .servicios-container {
+        margin-top: 50px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "ingredientes rapidez"
+            "calidad delivery";
+    }
+
+    .imagen-central {
+        display: none;
+    }
+
+    .items .texto-item {
+        font-size: 20px;
+    }
+}
+
+
+/* ----------- MEDIA QUERYS ---------------------------------*/
+/* ----------- MEDIA QUERYS ---------------------------------*/
+/* ----------- MEDIA QUERYS ---------------------------------*/
+
+/* estilos para pantallas de mesnos de 650px */
+
+@media screen and (max-width: 650px) {
+
+    /* para menu principal*/
+    .menu-principal {
+        position: fixed;
+        top: 0;
+        margin-top: 2px;
+    }
+
+    .menu-principal i {
+        display: block;
+    }
+
+    .menu-bar {
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 1000;
+        /* capas, queda adelante de todas*/
+        background: #333333;
+        transition: all 0.5s;
+        transform: translateX(100%);
+    }
+
+    .menu-bar.active {
+        transform: translateX(0%);
+
+    }
+
+    .menu-bar i {
+        position: absolute;
+        right: 50px;
+        top: 50px;
+    }
+
+    .menu-bar .enlaces ul li {
+        display: block;
+        padding: 20px 10px;
+        text-align: center;
+    }
+
+    .menu-bar .enlaces ul li a,
+    .menu-bar .redes-sociales a {
+        font-size: 20px;
+    }
+
+    .slider {
+        margin: 5vh;
+        height: calc(100vh - 0px);
+    }
+
+    .imagen-productos {
+        width: 50%;
+    }
+
+    .descrip-productos h1 {
+        font-size: 7vw;
+    }
+
+    .descrip-productos h2 {
+        font-size: 3vw;
+    }
+
+
+    /* para seccion servicios*/
+    .items .texto-item {
+        font-size: 16px;
+    }
+
+
+    /* para seccion ingredientes*/
+    .ingred-info .ingred-txt {
+        display: none;
+    }
+
+
+    /* para la seccion de contacto*/
+    #contacto-formulario {
+        width: 100%;
+    }
+
+    .two-fiels {
+        flex-direction: column;
+    }
+
+    .inputConIcono {
+        width: 100%;
+    }
+
+
+    /* para las alertas*/
+    .alert {
+        width: 95%;
+    }
+
+    .alert.show {
+        transform: translateY(150%);
+    }
+
+
+    /* para el  FOOOOOTER*/
+    footer{
+        flex-wrap: wrap; /* permite que al llegar a 650px de pantalla los 4 elementos de footer se ajusten unos arriba de otros */   
+        margin-top: 10px;
+    }
+    .sociales-metodo{
+        width: 50%;
+    }
+
+    /* para ir a arriba con click en el logo*/
+    #btn-top{
+        display: none;
+    }
+
+
+}
